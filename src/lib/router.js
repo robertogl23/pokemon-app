@@ -29,7 +29,8 @@ export const hashChange = async () => {
   }
 
   page.setAttribute('name', `pakemon-home`);
-  await PokemonList();
+  $('.grid-pokemon').classList.remove('hidden');
+
 
 
 };
