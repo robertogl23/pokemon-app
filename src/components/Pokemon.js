@@ -1,12 +1,16 @@
 import { $ } from '../lib/dom';
+import { ItemPath, newItem } from './ItemPath';
 
 export const Pokemon = ({ name, url }) => {
   const pokemonId = url.split('/')[url.split('/').length - 2];
   const figureElement = document.createElement('li');
 
-
   figureElement.addEventListener('click', () => {
-    window.location.hash = `#${pokemonId}`;
+    newPath.classList.remove('hidden');
+    $('#idPokemon').innerHTML = pokemonId;
+    $('#pokemon-list').classList.add('fade-out');
+    $('.grid-pokemon').innerHTML = '';
+    history.pushState(null,`${name}`,`#${pokemonId}`);
   });
 
   figureElement.innerHTML = `
