@@ -1,3 +1,4 @@
+/* GRID POKEMON LIST */
 .grid-pokemon {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
@@ -11,54 +12,47 @@
 .grid-pokemon li {
   background: var(--gray-8);
   box-shadow: var(--shadow-2);
+  border: var(--border-size-1) solid var(--gray-7);
   height: 10rem;
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius-conditional-3);
 }
 .grid-pokemon li:hover {
   transition-duration: 1s;
   box-shadow: var(--shadow-4);
-  border: 1px solid var(--gray-2);
+  border: var(--border-size-1) solid var(--gray-1);
   cursor: pointer;
-  animation: shake 0.82s;
+  animation: var(--animation-shake-y);
 }
-.grid-pokemon footer{
-  height:30%;
+.grid-pokemon footer {
+  height: 30%;
   display: flex;
   align-items: center;
 }
 /* TEXT NAME POKEMON */
 .grid-pokemon figcaption {
   text-transform: capitalize;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  letter-spacing: var(--font-letterspacing-3);
 }
 /* CONTAINER IMAGE */
-.grid-pokemon header{
-  height:70%;
+.grid-pokemon header {
+  height: 70%;
   display: grid;
   place-content: center;
 }
-.grid-pokemon  img {
+.grid-pokemon img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
 
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+.fade-out {
+  animation: var(--animation-fade-out) forwards;
 }
+.fade-in {
+  animation: var(--animation-fade-in) forwards;
+}
+
+
