@@ -1,0 +1,39 @@
+#path-app{
+  height: var(--size-10);
+  display: flex;
+  align-items: center;
+}
+
+#path-app ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: start;
+  gap: var(--size-2);
+}
+#path-app li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#idPokemon {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-7);
+  color: var(--color-text-1);
+  cursor: pointer;
+  margin-top: var(--size-1);
+  padding-left: var(--size-1);
+}
+
+.svg-arrow{
+  margin-top: var(--size-1);
+  width: var(--font-size-fluid-1);
+  height: var(--font-size-fluid-1);
+  fill: var(--color-text-1);
+}
+
+
