@@ -10,17 +10,17 @@ export const Pokemon = ({ name, url }) => {
   });
 
   figureElement.innerHTML = `
-  <figure>
-    <header >
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png"
-        alt="${name}"
-        loading="lazy">
-    </header>
-    <footer>
-      <figcaption>${name}</figcaption>
-    </footer>
-  </figure>
+    <figure>
+      <header >
+        <img
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png"
+          alt="${name}"
+          loading="lazy">
+      </header>
+      <footer>
+        <figcaption>${name}</figcaption>
+      </footer>
+    </figure>
   `;
 
   return figureElement;
