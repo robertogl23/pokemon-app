@@ -11,10 +11,8 @@ export const PokemonList = async () => {
   `;
 
   try {
-    const data = await axiosInstance.get('pokemon?limit=100&offset=1');
-
+    const data = await axiosInstance.get('pokemon?limit=10&offset=1');
     const listaPokemon = data.data.results;
-
     listaPokemon.forEach((pokemon) => {
       template.appendChild(Pokemon(pokemon));
     });
