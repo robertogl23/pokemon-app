@@ -1,41 +1,44 @@
 .grid-pokemon {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  grid-gap: 10px;
+  grid-gap: 1.5rem;
 }
 .grid-pokemon figure {
   height: 100%;
   width: 100%;
 }
+/* CARD */
 .grid-pokemon li {
-  background: rgb(12, 12, 12);
+  background: var(--gray-8);
+  box-shadow: var(--shadow-2);
   height: 10rem;
   width: 100%;
   border-radius: 8px;
 }
 .grid-pokemon li:hover {
   transition-duration: 1s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-4);
+  border: 1px solid var(--gray-2);
   cursor: pointer;
   animation: shake 0.82s;
-}
-.grid-pokemon header{
-  height:70%;
-  display: grid;
-  place-content: center;
-  background: rgb(18, 18, 18);
 }
 .grid-pokemon footer{
   height:30%;
   display: flex;
   align-items: center;
-  padding-left: 1rem;
 }
+/* TEXT NAME POKEMON */
 .grid-pokemon figcaption {
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+/* CONTAINER IMAGE */
+.grid-pokemon header{
+  height:70%;
+  display: grid;
+  place-content: center;
 }
 .grid-pokemon  img {
   height: 100%;
